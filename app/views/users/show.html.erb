@@ -1,0 +1,10 @@
+    <div class="contents row" >
+      <p style="text-align:center;"><%= @nickname %>さんの投稿一覧</p>
+      <% @tweets.each do |tweet| %>
+        <div class="content_post">
+          <div style="background:#f7f7f7; padding:30px; border-radius: 10px; border: 3px dotted #ffb6c1; width:500px; margin-left:auto;margin-right:auto;">
+           <%= simple_format(tweet.text) %>
+          </div>
+        </div>
+      <% end %>
+    </div>

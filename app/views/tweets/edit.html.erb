@@ -1,0 +1,11 @@
+  <div class="contents row">
+    <%= form_tag("/tweets/#{@tweet.id}", method: :patch ) do %>
+      <h3 style="text-align: center">
+        <font size="5">編集</font>
+      </h3>
+        <div style="background:#f7f7f7; padding:30px; border-radius: 10px; border: 3px dotted #ffb6c1; width:500px; margin:auto;">
+          <textarea cols="30" name="text" placeholder="text" rows="10"><%= @tweet.text %></textarea>
+          <input type="submit" value="SENT">
+        </div>
+    <% end %>
+  </div>

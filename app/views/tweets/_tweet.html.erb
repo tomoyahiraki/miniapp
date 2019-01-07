@@ -1,0 +1,23 @@
+    <div style="background:#f7f7f7; padding:30px; border-radius: 10px; border: 3px dotted #ffb6c1; width:500px; margin-left:auto;margin-right:auto;">
+
+        <%= simple_format(tweet.text) %>
+
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <li class="btn">
+          <font color="white">
+          <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+        </font></li>
+        <li class="btn" color="white">
+          <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+        </li>
+      <% end %>
+
+          <span class="name">
+            <a href="">
+              <p>
+                <span>投稿者 : </span><%= tweet.user.nickname %>
+              </p>
+            </a>
+          </span>
+    </div>
+

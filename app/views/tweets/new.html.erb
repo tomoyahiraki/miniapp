@@ -1,0 +1,10 @@
+<div class="contents row">
+  <%= form_tag('/tweets', method: :post) do %>
+      <h3 style="text-align: center">
+        <font size="5">新規投稿</font>
+      </h3>
+        <div style="background:#f7f7f7; padding:30px; border-radius: 10px; border: 3px dotted #ffb6c1; width:500px; margin:auto;">
+    <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
